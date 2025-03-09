@@ -1,0 +1,83 @@
+{
+  "usuarios": [
+    {
+      "id": "819fb16d-3f8f-4c16-aa60-9c42d8e64311",
+      "nombre": "Admin",
+      "apellido": "Sistema",
+      "username": "admin123",
+      "password": "$2b$10$BsnnHyK9B9Ez2rn9OgIUneGeCaLwqt7RJuUPiNJ6SgOhw.L1TWUKa",
+      "correoElectronico": "admin@sistema.com",
+      "numeroTelefono": "1234567890"
+    }
+  ],
+  "alumnos": [
+    {
+      "id": "59938ea8-82c8-4ca8-ba5c-6abf2072a3bb",
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "idGrupo": null
+    },
+    {
+      "id": "1768264d-7dd6-496f-9c51-9d69e8c4f911",
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "idGrupo": "0b177037-2a1f-4f2d-aed8-4738b99e9a78"
+    }
+  ],
+  "grupos": [
+    {
+      "id": "0b177037-2a1f-4f2d-aed8-4738b99e9a78",
+      "nombre": "1A",
+      "grado": 1,
+      "descripcion": "Primer grado grupo A",
+      "alumnos": [
+        "1768264d-7dd6-496f-9c51-9d69e8c4f911"
+      ]
+    }
+  ],
+  "camposFormativos": [
+    {
+      "id": "1",
+      "nombre": "Lenguajes",
+      "color": "Rojo"
+    },
+    {
+      "id": "2",
+      "nombre": "Saberes y pensamientos científico",
+      "color": "Azul"
+    },
+    {
+      "id": "3",
+      "nombre": "Ética, Naturaleza y sociedades",
+      "color": "Verde"
+    },
+    {
+      "id": "4",
+      "nombre": "De lo humano a lo comunitario",
+      "color": "Morado"
+    }
+  ],
+  "camposEvaluativos": [
+    {
+      "id": "1",
+      "nombre": "Tareas"
+    },
+    {
+      "id": "2",
+      "nombre": "Lecturas"
+    },
+    {
+      "id": "3",
+      "nombre": "Escritura"
+    },
+    {
+      "id": "4",
+      "nombre": "Tablas de multiplicar"
+    },
+    {
+      "id": "5",
+      "nombre": "Participaciones"
+    }
+  ],
+  "calificaciones": []
+}
