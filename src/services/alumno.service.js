@@ -1,4 +1,3 @@
-// src/services/alumno.service.js
 import { AlumnoRepository } from "../repositories/alumno.repository.js";
 import { GrupoRepository } from "../repositories/grupo.repository.js";
 import { Alumno } from "../models/alumno.model.js";

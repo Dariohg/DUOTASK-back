@@ -1,9 +1,8 @@
 export class Calificacion {
-    constructor(id, idAlumno, idCampoEvaluativo, idCampoFormativo, calificacion) {
+    constructor(id, idActividad, idAlumno, calificacion) {
         this.id = id;
+        this.idActividad = idActividad;
         this.idAlumno = idAlumno;
-        this.idCampoEvaluativo = idCampoEvaluativo;
-        this.idCampoFormativo = idCampoFormativo;
         this.calificacion = calificacion;
     }
 }

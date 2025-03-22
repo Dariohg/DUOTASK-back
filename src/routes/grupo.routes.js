@@ -1,11 +1,10 @@
-// src/routes/grupo.routes.js
 import { Router } from "express";
 import { GrupoController } from "../controllers/grupo.controller.js";
 import { authenticate } from "../middlewares/auth.middleware.js";
 
 export const router = Router();
 
-router.use(authenticate); // Todas las rutas requieren autenticación
+router.use(authenticate);
 
 // Rutas básicas de CRUD
 router.get("/", GrupoController.getAll);

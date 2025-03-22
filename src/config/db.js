@@ -19,6 +19,7 @@ const defaultData = {
         { id: "4", nombre: "Tablas de multiplicar" },
         { id: "5", nombre: "Participaciones" }
     ],
+    actividades: [],
     calificaciones: []
 };
 

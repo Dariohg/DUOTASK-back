@@ -6,7 +6,7 @@ export class CalificacionController {
             const calificaciones = await CalificacionService.getAllCalificaciones();
             res.json(calificaciones);
         } catch (error) {
-            res.status(400).json({error: error.message});
+            res.status(400).json({ error: error.message });
         }
     }
 
@@ -15,7 +15,7 @@ export class CalificacionController {
             const calificacion = await CalificacionService.getCalificacionById(req.params.id);
             res.json(calificacion);
         } catch (error) {
-            res.status(400).json({error: error.message});
+            res.status(400).json({ error: error.message });
         }
     }
 
@@ -24,35 +24,34 @@ export class CalificacionController {
             const calificaciones = await CalificacionService.getCalificacionesByAlumno(req.params.idAlumno);
             res.json(calificaciones);
         } catch (error) {
-            res.status(400).json({error: error.message});
+            res.status(400).json({ error: error.message });
         }
     }
 
     static async create(req, res) {
         try {
-            const {idAlumno, idCampoEvaluativo, idCampoFormativo, calificacion} = req.body;
+            const { idActividad, idAlumno, calificacion } = req.body;
             const nuevaCalificacion = await CalificacionService.createCalificacion(
+                idActividad,
                 idAlumno,
-                idCampoEvaluativo,
-                idCampoFormativo,
                 calificacion
             );
             res.status(201).json(nuevaCalificacion);
         } catch (error) {
-            res.status(400).json({error: error.message});
+            res.status(400).json({ error: error.message });
         }
     }
 
     static async update(req, res) {
         try {
-            const {calificacion} = req.body;
+            const { calificacion } = req.body;
             const calificacionActualizada = await CalificacionService.updateCalificacion(
                 req.params.id,
                 calificacion
             );
             res.json(calificacionActualizada);
         } catch (error) {
-            res.status(400).json({error: error.message});
+            res.status(400).json({ error: error.message });
         }
     }
 
@@ -61,16 +60,56 @@ export class CalificacionController {
             await CalificacionService.deleteCalificacion(req.params.id);
             res.status(204).send();
         } catch (error) {
-            res.status(400).json({error: error.message});
+            res.status(400).json({ error: error.message });
         }
     }
 
-    static async getCalificacionesCompletas(req, res) {
+    static async getByActividad(req, res) {
         try {
-            const calificaciones = await CalificacionService.getCalificacionesCompletas();
+            const calificaciones = await CalificacionService.getCalificacionesCompletasPorActividad(req.params.idActividad);
             res.json(calificaciones);
         } catch (error) {
-            res.status(400).json({error: error.message});
+            res.status(400).json({ error: error.message });
+        }
+    }
+
+    static async getByGrupoYCampos(req, res) {
+        try {
+            const { idGrupo, idCampoEvaluativo, idCampoFormativo } = req.params;
+            const resultado = await CalificacionService.getCalificacionesPorGrupoYCampos(
+                idGrupo,
+                idCampoEvaluativo,
+                idCampoFormativo
+            );
+            res.json(resultado);
+        } catch (error) {
+            res.status(400).json({ error: error.message });
+        }
+    }
+
+    static async getByGrupoYCampoFormativo(req, res) {
+        try {
+            const { idGrupo, idCampoFormativo } = req.params;
+            const resultado = await CalificacionService.getCalificacionesPorGrupoYCampoFormativo(
+                idGrupo,
+                idCampoFormativo
+            );
+            res.json(resultado);
+        } catch (error) {
+            res.status(400).json({ error: error.message });
+        }
+    }
+
+    static async getByGrupoYCampoEvaluativo(req, res) {
+        try {
+            const { idGrupo, idCampoEvaluativo } = req.params;
+            const resultado = await CalificacionService.getCalificacionesPorGrupoYCampoEvaluativo(
+                idGrupo,
+                idCampoEvaluativo
+            );
+            res.json(resultado);
+        } catch (error) {
+            res.status(400).json({ error: error.message });
         }
     }
 }

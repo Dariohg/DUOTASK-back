@@ -1,4 +1,3 @@
-// src/controllers/grupo.controller.js
 import { GrupoService } from "../services/grupo.service.js";
 
 export class GrupoController {

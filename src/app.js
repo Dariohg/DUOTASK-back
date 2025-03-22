@@ -1,4 +1,3 @@
-// src/app.js
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -7,6 +6,7 @@ import { router as alumnoRoutes } from "./routes/alumno.routes.js";
 import { router as grupoRoutes } from "./routes/grupo.routes.js";
 import { router as campoFormativoRoutes } from "./routes/campoFormativo.routes.js";
 import { router as campoEvaluativoRoutes } from "./routes/campoEvaluativo.routes.js";
+import { router as actividadRoutes } from "./routes/actividad.routes.js";
 import { router as calificacionRoutes } from "./routes/calificacion.routes.js";
 
 dotenv.config();
@@ -23,6 +23,7 @@ app.use("/api/alumnos", alumnoRoutes);
 app.use("/api/grupos", grupoRoutes);
 app.use("/api/campos-formativos", campoFormativoRoutes);
 app.use("/api/campos-evaluativos", campoEvaluativoRoutes);
+app.use("/api/actividades", actividadRoutes);
 app.use("/api/calificaciones", calificacionRoutes);
 
 // Ruta para verificar que el servidor está funcionando

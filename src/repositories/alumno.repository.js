@@ -1,4 +1,3 @@
-// src/repositories/alumno.repository.js
 import db from "../config/db.js";
 import { GrupoRepository } from "./grupo.repository.js";
 

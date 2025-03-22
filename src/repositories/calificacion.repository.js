@@ -2,19 +2,33 @@ import db from "../config/db.js";
 
 export class CalificacionRepository {
     static getAll() {
+        if (!db.data.calificaciones) {
+            db.data.calificaciones = [];
+        }
         return db.data.calificaciones;
     }
 
     static findById(id) {
-        return db.data.calificaciones.find(calificacion => calificacion.id === id);
+        return this.getAll().find(calificacion => calificacion.id === id);
     }
 
     static findByAlumno(idAlumno) {
-        return db.data.calificaciones.filter(calificacion => calificacion.idAlumno === idAlumno);
+        return this.getAll().filter(calificacion => calificacion.idAlumno === idAlumno);
+    }
+
+    static findByActividad(idActividad) {
+        return this.getAll().filter(calificacion => calificacion.idActividad === idActividad);
+    }
+
+    static findByAlumnoYActividad(idAlumno, idActividad) {
+        return this.getAll().find(
+            calificacion => calificacion.idAlumno === idAlumno &&
+                calificacion.idActividad === idActividad
+        );
     }
 
     static save(calificacion) {
-        db.data.calificaciones.push(calificacion);
+        this.getAll().push(calificacion);
         db.write();
         return calificacion;
     }
@@ -30,9 +44,9 @@ export class CalificacionRepository {
     }
 
     static delete(id) {
-        const index = db.data.calificaciones.findIndex(calificacion => calificacion.id === id);
+        const index = this.getAll().findIndex(calificacion => calificacion.id === id);
         if (index !== -1) {
-            db.data.calificaciones.splice(index, 1);
+            this.getAll().splice(index, 1);
             db.write();
             return true;
         }

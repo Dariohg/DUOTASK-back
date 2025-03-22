@@ -1,4 +1,3 @@
-// src/controllers/alumno.controller.js
 import { AlumnoService } from "../services/alumno.service.js";
 
 export class AlumnoController {

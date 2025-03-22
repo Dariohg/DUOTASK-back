@@ -12,27 +12,35 @@
   ],
   "alumnos": [
     {
-      "id": "59938ea8-82c8-4ca8-ba5c-6abf2072a3bb",
+      "id": "35be6e94-48f2-49d8-95ac-81c56bdafc3e",
       "nombre": "Juan",
       "apellido": "Pérez",
-      "idGrupo": null
+      "idGrupo": "b3fff62f-add0-415a-b5da-32e84010f255"
     },
     {
-      "id": "1768264d-7dd6-496f-9c51-9d69e8c4f911",
-      "nombre": "Juan",
-      "apellido": "Pérez",
-      "idGrupo": "0b177037-2a1f-4f2d-aed8-4738b99e9a78"
+      "id": "1e629397-1084-45f0-9508-8c6288d4689b",
+      "nombre": "Maria",
+      "apellido": "Lopez",
+      "idGrupo": "b3fff62f-add0-415a-b5da-32e84010f255"
     }
   ],
   "grupos": [
     {
-      "id": "0b177037-2a1f-4f2d-aed8-4738b99e9a78",
+      "id": "b3fff62f-add0-415a-b5da-32e84010f255",
       "nombre": "1A",
       "grado": 1,
       "descripcion": "Primer grado grupo A",
       "alumnos": [
-        "1768264d-7dd6-496f-9c51-9d69e8c4f911"
+        "35be6e94-48f2-49d8-95ac-81c56bdafc3e",
+        "1e629397-1084-45f0-9508-8c6288d4689b"
       ]
+    },
+    {
+      "id": "d5401e31-e1a4-464b-a464-1dce204f7b73",
+      "nombre": "3A",
+      "grado": 3,
+      "descripcion": "Tercer grado grupo A",
+      "alumnos": []
     }
   ],
   "camposFormativos": [
@@ -79,5 +87,26 @@
       "nombre": "Participaciones"
     }
   ],
-  "calificaciones": []
+  "actividades": [
+    {
+      "id": "da24d07f-560f-4d93-8606-dacffd3b80a7",
+      "idCampoEvaluativo": "1",
+      "idCampoFormativo": "2",
+      "nombre": "Tarea 1: Investigación sobre el sistema solar"
+    }
+  ],
+  "calificaciones": [
+    {
+      "id": "fb6d5ae7-bd40-41d0-9452-72ebe85d7a9c",
+      "idActividad": "da24d07f-560f-4d93-8606-dacffd3b80a7",
+      "idAlumno": "35be6e94-48f2-49d8-95ac-81c56bdafc3e",
+      "calificacion": 8.5
+    },
+    {
+      "id": "eb30435f-3c8f-4e4b-8956-da146fdbc50f",
+      "idActividad": "da24d07f-560f-4d93-8606-dacffd3b80a7",
+      "idAlumno": "1e629397-1084-45f0-9508-8c6288d4689b",
+      "calificacion": 9
+    }
+  ]
 }

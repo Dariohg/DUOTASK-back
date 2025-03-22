@@ -9,5 +9,4 @@ export class CampoEvaluativoRepository {
         return db.data.camposEvaluativos.find(campo => campo.id === id);
     }
 
-    // No implementamos save, update y delete porque son datos fijos
 }
