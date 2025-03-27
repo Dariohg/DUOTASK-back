@@ -8,6 +8,7 @@ import { router as campoFormativoRoutes } from "./routes/campoFormativo.routes.j
 import { router as campoEvaluativoRoutes } from "./routes/campoEvaluativo.routes.js";
 import { router as actividadRoutes } from "./routes/actividad.routes.js";
 import { router as calificacionRoutes } from "./routes/calificacion.routes.js";
+import { router as asistenciaRoutes} from "./routes/asistencia.routes.js"
 
 dotenv.config();
 
@@ -25,6 +26,8 @@ app.use("/api/campos-formativos", campoFormativoRoutes);
 app.use("/api/campos-evaluativos", campoEvaluativoRoutes);
 app.use("/api/actividades", actividadRoutes);
 app.use("/api/calificaciones", calificacionRoutes);
+app.use("/api/asistencias", asistenciaRoutes)
+
 
 // Ruta para verificar que el servidor está funcionando
 app.get("/", (req, res) => {

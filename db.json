@@ -65,6 +65,22 @@
       "color": "Morado"
     }
   ],
+  "asistencias": [
+    {
+      "id": "f4c1d1ab-7520-4b6d-a17b-accb0702210b",
+      "idGrupo": "b3fff62f-add0-415a-b5da-32e84010f255",
+      "idAlumno": "35be6e94-48f2-49d8-95ac-81c56bdafc3e",
+      "asistencia": "asistencia",
+      "fecha": "2025-03-27T02:19:12.189Z"
+    },
+    {
+      "id": "52d7e86a-e665-4114-8561-97dc2acb3523",
+      "idGrupo": "b3fff62f-add0-415a-b5da-32e84010f255",
+      "idAlumno": "1e629397-1084-45f0-9508-8c6288d4689b",
+      "asistencia": "falta",
+      "fecha": "2025-03-27T02:19:12.190Z"
+    }
+  ],
   "camposEvaluativos": [
     {
       "id": "1",

@@ -6,6 +6,7 @@ const defaultData = {
     usuarios: [],
     alumnos: [],
     grupos: [],
+    asistencias: [], 
     camposFormativos: [
         { id: "1", nombre: "Lenguajes", color: "Rojo" },
         { id: "2", nombre: "Saberes y pensamientos científico", color: "Azul" },
